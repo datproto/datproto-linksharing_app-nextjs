@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Instrument;
+  font-weight: 400;
+  src: url(../../public/fonts/static/InstrumentSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Instrument;
+  font-weight: 600;
+  src: url(../../public/fonts/static/InstrumentSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Instrument;
+  font-weight: 700;
+  src: url(../../public/fonts/static/InstrumentSans-Bold.ttf) format('truetype');
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +34,27 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Typography */
+.heading {
+  &-m {
+    line-height: 150%;
+    @apply font-bold text-[2rem]
+  }
+
+  &-s {
+    line-height: 150%;
+    @apply font-bold text-base
+  }
+}
+
+.body {
+  &-m {
+    line-height: 150%;
+    @apply text-base
+  }
+
+  &-s {
+    line-height: 150%;
+    @apply text-xs
+  }
 }
