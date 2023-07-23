@@ -20,6 +20,7 @@
       }
     ],
     "paths": {
+      "@linksharing/public/*": ["./public/*"],
       "@/*": ["./src/*"]
     }
   },
